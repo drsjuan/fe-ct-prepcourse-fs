@@ -129,9 +129,9 @@ function fizzBuzz(num) {
         if ( num % 5 == 0 ){
            return "buzz";
         }else
-            if ( num % 3 == 0 || num % 5 == 0 ){
+            if ( num % 2 == 0 && num % 3 == 0 && num % 5 == 0){
                return "fizzbuzz";
-            }return false;
+               }return false;
    }
 
 function operadoresLogicos(num1, num2, num3) {
