@@ -33,6 +33,7 @@ function agregarItemAlFinalDelArray(array, elemento) {
        x + 1
     
 });
+}
 
 function agregarItemAlComienzoDelArray(array, elemento) {
    // Agrega el "elemento" al comienzo del arreglo recibido.
