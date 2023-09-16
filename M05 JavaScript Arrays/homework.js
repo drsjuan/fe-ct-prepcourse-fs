@@ -51,18 +51,24 @@ function dePalabrasAFrase(palabras) {
    // con un espacio entre cada palabra.
    // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'.
    // Tu código:
-   var suma = [];
-   for (var i=1;i < palabras.length - 1;i++){
-      suma = suma + palabras[i] + " ";
-    }
-       return suma;
-}
+   //var suma; 
+   //for (var i=0;i < palabras.length;i++){
+   //   suma = suma + palabras[i] + " ";
+   // }
+   //    return suma;
+  
+  // for (var i=0;i < palabras.length;i++){
+  //    suma = concat(palabras[i].join(" "));
+  // }
+     return palabras.join(" ");      
+ }
 
 function arrayContiene(array, elemento) {
    // Verifica si el elemento existe dentro del arreglo recibido.
    // Retornar true si está, o false si no está.
    // Tu código:
-}
+   
+  }
 
 function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
