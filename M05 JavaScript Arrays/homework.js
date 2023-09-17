@@ -67,13 +67,36 @@ function arrayContiene(array, elemento) {
    // Verifica si el elemento existe dentro del arreglo recibido.
    // Retornar true si está, o false si no está.
    // Tu código:
-   
-  }
+//   for (var i=0;i<array.length;i++){
+//      if (array[i] == 10){
+//         return true;
+//      }else{
+//         if (i = array.length){
+//            return false;   
+//       }    
+//      }
+//    } 
+//   }
+
+   var array = [2,3,5,7];
+   const idx = array.find(( x ) => x == elemento)
+   if (idx == 10){
+      return true;
+   }else{
+      return false;
+   }  
+}
 
 function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
    // Suma todos los elementos y retorna el resultado.
    // Tu código:
+      let suma = 0;
+      var idx  = arrayOfNums.map(function( x ){
+          return suma = suma + x     
+      });
+      return suma; 
+
 }
 
 function promedioResultadosTest(resultadosTest) {
