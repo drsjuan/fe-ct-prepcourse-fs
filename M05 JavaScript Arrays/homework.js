@@ -78,9 +78,9 @@ function arrayContiene(array, elemento) {
 //    } 
 //   }
 
-   var array = [2,3,5,7];
+  // var array = [2,3,5,7];
    const idx = array.find(( x ) => x == elemento)
-   if (idx == 10){
+   if (idx == elemento){
       return true;
    }else{
       return false;
@@ -103,19 +103,31 @@ function promedioResultadosTest(resultadosTest) {
    // El parámetro "resultadosTest" es un arreglo de números.
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
+   var suma = 0;
+   var idx = array.map(function ( x ){
+      suma = suma + x
+   });
+   return  suma / array.length  
 }
 
 function numeroMasGrande(arrayOfNums) {
+
    // El parámetro "arrayOfNums" es un arreglo de números.
    // Retornar el número más grande.
    // Tu código:
+    return arrayOfNums.sort().pop();
 }
 
 function multiplicarArgumentos() {
    // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto.
-   // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
+   0// Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
+  // let res = 0 
+   //for (var i=0;i<arguments.length,i++){
+   //           arguments[i] 
+
+   //}
 }
 
 function cuentoElementos(array) {
