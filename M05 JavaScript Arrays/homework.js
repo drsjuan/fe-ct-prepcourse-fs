@@ -150,8 +150,8 @@ function multiplicarArgumentos() {
            for (var i=0;i<arguments.length;i++){
                res  = res *  arguments[i] ;
             }
-        }   
             return res;
+      
        
 
 function cuentoElementos(array) {
