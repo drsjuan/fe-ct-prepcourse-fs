@@ -140,18 +140,18 @@ function multiplicarArgumentos() {
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
-   var res = 1; 
+   let res = 1; 
    if (arguments.length == 0){
       return 0;
    }else
         if (arguments.length == 1 ) {
             return arguments;
-        }else    
+        }    
            for (var i=0;i<arguments.length;i++){
                res  = res *  arguments[i] ;
             }
+        }   
             return res;
-}
        
 
 function cuentoElementos(array) {
