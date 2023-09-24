@@ -104,10 +104,10 @@ function promedioResultadosTest(resultadosTest) {
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
    var suma = 0;
-   var idx = array.map(function ( x ){
+   var idx = resultadosTest.map(function ( x ){
       suma = suma + x
    });
-   return  suma / array.length  
+   return  suma / resultadosTest.length  
 }
 
 function numeroMasGrande(arrayOfNums) {
@@ -115,24 +115,48 @@ function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
    // Retornar el número más grande.
    // Tu código:
-    return arrayOfNums.sort().pop();
+   // return arrayOfNums.sort.pop();
+   //var arrayres = [];
+   //var arrayOfNums = [5,1,7,3,2,0,6,10];
+   //var arrayres=arrayOfNums.sort();
+   //console.log(arrayres);
+   var elemcopy = 0;
+   var band=0;
+   do 
+     for (var i = 0;i<arrayOfNums.length;i++){
+       if (arrayOfNums[i]>arrayOfNums[i+1]){ 
+           band = 1;
+           elemcopy = arrayOfNums[i];
+           arrayOfNums[i] = arrayOfNums[i+1]; 
+           arrayOfNums[i+1] = elemcopy;
+      }
+   }
+    while (band=0)      
+     return arrayOfNums.pop(); 
 }
 
 function multiplicarArgumentos() {
    // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto.
-   0// Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
+   // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
-  // let res = 0 
-   //for (var i=0;i<arguments.length,i++){
-   //           arguments[i] 
-
-   //}
+   let res = 1 
+   for (var i=0;i<arguments.length;i++){
+        res  = res *  arguments[i] ;
+   }
+       return res;   
 }
 
 function cuentoElementos(array) {
    // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
    // Tu código:
+   var acumulador = 0;
+   for (var i=0;i<array.length;i++){
+      if (array[i]>18){
+         acumulador = acumulador + 1
+      }  
+   }
+    return acumulador;
 }
 
 function diaDeLaSemana(numeroDeDia) {
@@ -140,25 +164,54 @@ function diaDeLaSemana(numeroDeDia) {
    // Realiza una función que, dado el número del día de la semana, retorne: "Es fin de semana"
    // si el día corresponde a "Sábado" o "Domingo", y "Es dia laboral" en caso contrario.
    // Tu código:
+   var nrodiaordenado = [];
+   nrodiaordenado = numeroDeDia.sort();
+   //for (var i=0;i<=numeroDeDia.length;i++)
+   //var nomdia = ['Domingo','Lunes','Martes','Miercoles','jueves','Viernes','Sabado'];
+   for (var i=0;i<=nrodiaordenado.length;i++)
+   switch (nrodiaordenado[i]){
+      case (nrodiaordenado[i]==0 || nrodiaordenado[i]==6):
+           return "Es fin de semana";
+      default:
+           return "Es dia laboral"     
+   } 
 }
 
 function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar true si el entero inicia con 9 y false en otro caso.
    // Tu código:
+   var numstring = 0;
+   numstring = num.numstring();
+   switch (numstring[i]) {
+      case numstring[i] == 9:
+           return true;
+      default:
+           return false;
+   }
 }
 
 function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar true.
    // Caso contrario retornar false.
    // Tu código:
-}
+   var arrayord = [];
+   arrayord = array.sort();
+   for (var i=0;i<arrayord.length;i++){
+      if (arrayord[i]  === arrayord[i+1]){
+         return true;
+      }else{
+        return false;
+   }  
+  }     
+}  
 
 function mesesDelAño(array) {
    // El arreglo contiene algunos meses del año desordenados. Debes recorrerlo, buscar los meses "Enero",
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
+
 }
 
 function tablaDelSeis() {
