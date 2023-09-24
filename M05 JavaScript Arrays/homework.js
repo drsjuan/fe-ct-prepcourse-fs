@@ -145,14 +145,13 @@ function multiplicarArgumentos() {
       return 0;
    }else
         if (arguments.length == 1 ) {
-            return arguments;
+            return 1;
         }    
            for (var i=0;i<arguments.length;i++){
                res  = res *  arguments[i] ;
             }
             return res;
-      
-       
+         }         
 
 function cuentoElementos(array) {
    // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
@@ -171,27 +170,25 @@ function diaDeLaSemana(numeroDeDia) {
    // Realiza una función que, dado el número del día de la semana, retorne: "Es fin de semana"
    // si el día corresponde a "Sábado" o "Domingo", y "Es dia laboral" en caso contrario.
    // Tu código:
-   var nrodiaordenado = [];
-   nrodiaordenado = numeroDeDia.sort();
+   //var nrodiaordenado = [];
+   //nrodiaordenado = numeroDeDia.sort();
    //for (var i=0;i<=numeroDeDia.length;i++)
    //var nomdia = ['Domingo','Lunes','Martes','Miercoles','jueves','Viernes','Sabado'];
-   for (var i=0;i<=nrodiaordenado.length;i++)
-   switch (nrodiaordenado[i]){
-      case (nrodiaordenado[i]==0 || nrodiaordenado[i]==6):
-           return "Es fin de semana";
-      default:
-           return "Es dia laboral"     
-   } 
+   if (numeroDeDia == 1 || numeroDeDia == 7){
+        return "Es fin de semana";
+   }else{
+        return "Es dia laboral";     
+   }
 }
 
 function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar true si el entero inicia con 9 y false en otro caso.
    // Tu código:
-   var numstring = 0;
-   numstring = num.numstring();
-   switch (numstring[i]) {
-      case numstring[i] == 9:
+   var num = 0;
+   num = num.numstring();
+   switch (num[i]) {
+      case num[i] == 9:
            return true;
       default:
            return false;
@@ -202,15 +199,7 @@ function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar true.
    // Caso contrario retornar false.
    // Tu código:
-   var arrayord = [];
-   arrayord = array.sort();
-   for (var i=0;i<arrayord.length;i++){
-      if (arrayord[i]  === arrayord[i+1]){
-         return true;
-      }else{
-        return false;
-   }  
-  }     
+
 }  
 
 function mesesDelAño(array) {
