@@ -140,12 +140,19 @@ function multiplicarArgumentos() {
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
-   let res = 1 
-   for (var i=0;i<arguments.length;i++){
-        res  = res *  arguments[i] ;
-   }
-       return res;   
+   var res = 1; 
+   if (arguments.length == 0){
+      return 0;
+   }else
+        if (arguments.length == 1 ) {
+            return arguments;
+        }else    
+           for (var i=0;i<arguments.length;i++){
+               res  = res *  arguments[i] ;
+            }
+            return res;
 }
+       
 
 function cuentoElementos(array) {
    // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
@@ -156,9 +163,9 @@ function cuentoElementos(array) {
          acumulador = acumulador + 1
       }  
    }
-    return acumulador;
+   return acumulador; 
 }
-
+    
 function diaDeLaSemana(numeroDeDia) {
    // Supongamos que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente.
    // Realiza una función que, dado el número del día de la semana, retorne: "Es fin de semana"
