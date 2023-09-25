@@ -185,21 +185,38 @@ function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar true si el entero inicia con 9 y false en otro caso.
    // Tu código:
-   var num = 0;
-   num = num.numstring();
-   switch (num[i]) {
-      case num[i] == 9:
-           return true;
-      default:
-           return false;
+   var str = num.toString();
+   for (var i=0;i<str.length;i++){
+        if (str[0] == 9){
+          return true;
+        }else{
+          return false;
+        }  
    }
 }
 
 function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar true.
-   // Caso contrario retornar false.
+     // Caso contrario retornar false.
    // Tu código:
-
+   var res = 0
+   var xban=0
+   do
+   for (var i=0;i<array.length;i++){
+      if(array[i] == array[i+1]){
+             res = res + 1
+             xban = 1
+      }else
+        if (array[i] != array[i+1] && xban == 0){
+        xban = 0
+      }          
+   }
+   while ( i < array.length)
+   if (xban == 1 && res == array.length-1){
+       return true;
+   }else{
+       return false;
+   }
 }  
 
 function mesesDelAño(array) {
